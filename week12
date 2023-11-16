@@ -18,3 +18,25 @@ int main() {
 	cout << endl;
 
 }
+
+// [w12.02]
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int arr[5] = { 1,2,3,4,5 };
+	int* ptr = arr;
+
+	cout << "[Address of array elements]" << endl;
+	for (int i = 0; i < 5; i++) {
+		cout << i << " 번째 요소의 주소: 0x" << &arr[i];
+		cout << endl;
+	}
+	cout << endl;
+	cout << "[Address of elements using pointer variable]" << endl;
+	for (int i = 0; i < 5; i++) {
+		cout << "pointer + " << i << ": 0x" << ptr + i;
+		cout << endl;
+	}
+}
