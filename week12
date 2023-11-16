@@ -65,3 +65,29 @@ int main() {
 		cout << i << "번째 요소: 값 - " << pname[i] << ", 주소 - " << static_cast<const void*>(pname + i) << endl;
 	}
 }
+
+//[w12.04]
+
+#include <iostream>
+using namespace std;
+
+int len(char* str) {
+	int length = 0;
+	while (str[length] != '\0') {
+		length++;
+	}
+	return length;
+}
+
+int main() {
+	char arr[] = "hello world!!!";
+
+	cout << "[string]: " << arr << endl;
+	int length = len(arr);
+	
+	cout << "[string length]: " << length << endl;
+	return 0;
+}
+
+//[12.05]
+
