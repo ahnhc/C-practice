@@ -98,19 +98,19 @@ using namespace std;
 void init_random(int* arr, int size) {
     srand(time(NULL));
     for (int i = 0; i < size; ++i) {
-        arr[i] = rand() % 49 + 1;
+        *(arr + i) = rand() % 49 + 1;
     }
 }
 
 void doublearr(int* arr, int size) {
     for (int i = 0; i < size; ++i) {
-        arr[i] *= 2;
+        *(arr + i) *= 2;
     }
 }
 
 void printarr(int* arr, int size) {
     for (int i = 0; i < size; ++i) {
-        cout << arr[i] << " ";
+        cout << *(arr + i) << " ";
     }
     cout << endl;
 }
@@ -130,4 +130,3 @@ int main() {
 
     return 0;
 }
-
