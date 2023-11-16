@@ -40,3 +40,28 @@ int main() {
 		cout << endl;
 	}
 }
+
+//[w12.03]
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	char name[] = "banana";
+	const char* pname = "apple";
+
+	cout << "[array variable]: " << name << endl;
+	cout << "[pointer variable]: " << pname << endl;
+	cout << "[the value and address of elements]" << endl;
+
+	for (int i = 0; name[i] != '\0'; i++) {
+		cout << i << "번째 요소: 값 - " << name[i] << ", 주소 - " << static_cast<void *>(name + i) << endl;
+	}
+	cout << endl;
+
+	cout << "[the value and address of elements using pointer]" << endl;
+	for (int i = 0; pname[i] != '\0'; i++) {
+		cout << i << "번째 요소: 값 - " << pname[i] << ", 주소 - " << static_cast<const void*>(pname + i) << endl;
+	}
+}
